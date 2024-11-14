@@ -1,5 +1,5 @@
-name: "🌐 Frontend Issue Report"
-description: Report an issue specifically related to the website frontend. For other inquiries, please use the Discussions section.
+name: "🌐 Website Issue Report"
+description: Report an issue, an optimization request or an documentation issue specifically related to the website frontend.
 labels: "website"
 
 body:
