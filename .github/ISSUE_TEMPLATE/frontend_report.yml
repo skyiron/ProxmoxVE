@@ -1,6 +1,5 @@
 name: "🌐 Frontend Issue Report"
 description: Report an issue specifically related to the website frontend. For other inquiries, please use the Discussions section.
-title: "[Frontend]: "
 labels: "website"
 
 body:
