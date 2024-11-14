@@ -5,7 +5,7 @@ contact_links:
       about: For suggestions or questions, please use the Discussions section.
     - name: 🌟 Feature request
       url: https://github.com/community-scripts/ProxmoxVE/discussions/new?category=request-script
-      about: Please use our GitHub Discussion for making feature requests.
+      about: For feature/script requests, please use the Discussions section.
     - name: 💻 Discord
       url: https://discord.gg/UHrpNWGwkH
       about: Join our Discord server to chat with other users in the Proxmox Helper Scripts community.
