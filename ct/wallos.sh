@@ -63,7 +63,7 @@ if [[ ! -f /opt/${APP}_version.txt ]] || [[ "${RELEASE}" != "$(cat /opt/${APP}_v
   msg_info "Updating ${APP} to ${RELEASE}"
   cd /opt
   wget -q "https://github.com/ellite/Wallos/archive/refs/tags/v${RELEASE}.zip"
-  mkdir -p /opt/uploads
+  mkdir -p /opt/uploads_backup
   if [ -f "/opt/wallos/db/wallos.db" ]; then
   mv "/opt/wallos/db/wallos.db" "/opt/wallos.db"
   fi
