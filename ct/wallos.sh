@@ -64,17 +64,13 @@ if [[ ! -f /opt/${APP}_version.txt ]] || [[ "${RELEASE}" != "$(cat /opt/${APP}_v
   cd /opt
   wget -q "https://github.com/ellite/Wallos/archive/refs/tags/v${RELEASE}.zip"
   mkdir -p /opt/logos
-  if [ -f "/opt/wallos/db/wallos.db" ]; then
-  mv "/opt/wallos/db/wallos.db" "/opt/wallos.db"
-  fi
+  mv /opt/wallos/db/wallos.db /opt/wallos.db
   mv /opt/wallos/images/uploads/logos /opt/logos/
   unzip -q v${RELEASE}.zip
   rm -rf /opt/wallos
   mv Wallos-${RELEASE} /opt/wallos
   rm -rf /opt/wallos/db/wallos.empty.db
-  if [ -f "/opt/wallos.db" ]; then
-  mv "/opt/wallos.db" "/opt/wallos/db/wallos.db"
-  fi
+  mv /opt/wallos.db /opt/wallos/db/wallos.db
   mv /opt/logos/* /opt/wallos/images/uploads/logos
   chown -R www-data:www-data /opt/wallos
   chmod -R 755 /opt/wallos
