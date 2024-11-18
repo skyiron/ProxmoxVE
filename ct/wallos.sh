@@ -63,11 +63,11 @@ if [[ ! -f /opt/${APP}_version.txt ]] || [[ "${RELEASE}" != "$(cat /opt/${APP}_v
   msg_info "Updating ${APP} to ${RELEASE}"
   cd /opt
   wget -q "https://github.com/ellite/Wallos/archive/refs/tags/v${RELEASE}.zip"
-  mkdir -p /opt/uploads_backup
+  mkdir -p /opt/logos
   if [ -f "/opt/wallos/db/wallos.db" ]; then
   mv "/opt/wallos/db/wallos.db" "/opt/wallos.db"
   fi
-  mv /opt/wallos/images/uploads/* /opt/uploads_backup/
+  mv /opt/wallos/images/uploads/logos /opt/logos/
   unzip -q v${RELEASE}.zip
   rm -rf /opt/wallos
   mv Wallos-${RELEASE} /opt/wallos
@@ -75,7 +75,7 @@ if [[ ! -f /opt/${APP}_version.txt ]] || [[ "${RELEASE}" != "$(cat /opt/${APP}_v
   if [ -f "/opt/wallos.db" ]; then
   mv "/opt/wallos.db" "/opt/wallos/db/wallos.db"
   fi
-  mv /opt/uploads_backup/* /opt/wallos/images/uploads
+  mv /opt/logos/* /opt/wallos/images/uploads/logos
   chown -R www-data:www-data /opt/wallos
   chmod -R 755 /opt/wallos
   mkdir -p /var/log/cron
